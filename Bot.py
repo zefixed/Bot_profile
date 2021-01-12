@@ -360,47 +360,46 @@ def total(message):
     try:
         total = user_data.get(message.from_user.id)
         larger = max(total), total.index(max(total))
-        print(total, larger, user_data.get(message.from_user.id))
         if total[0] == larger[0]:
             msg = bot.send_message(message.chat.id,
-            'Больше всего вам подходит ' + cfg.chembio + ' \nКоличество баллов набранных вами по этому профилю: ' + str(larger[0]))
+            'Больше всего вам подходит ' + cfg.chembio + ' \nКоличество баллов набранных вами по этому профилю: ' + str(larger[0]) + ' (' + str(total[0] * 5) + '%)\n')
             bot.send_message(message.chat.id, 'Количество баллов набранных вами по остальным профилям:\n'
-                                              'Медиа профиль: ' + str(total[1]) + '\n'
-                                              'Профиль Кадеты: ' + str(total[2]) + '\n'
-                                              'Айти профиль: ' + str(total[3]) + '\n'
-                                              'Лингвистический профиль: ' + str(total[4]))
+                                              'Медиа профиль: ' + str(total[1]) + ' (' + str(total[1] * 5) + '%)\n'
+                                              'Профиль Кадеты: ' + str(total[2]) + ' (' + str(total[2] * 5) + '%)\n'
+                                              'Айти профиль: ' + str(total[3]) + ' (' + str(total[3] * 5) + '%)\n'
+                                              'Лингвистический профиль: ' + str(total[4]) + ' (' + str(total[4] * 5) + '%)\n')
         elif total[1] == larger[0]:
             msg = bot.send_message(message.chat.id,
-            'Больше всего вам подходит ' + cfg.media + ' \nКоличество баллов набранных вами по этому профилю ' + str(larger[1]))
+            'Больше всего вам подходит ' + cfg.media + ' \nКоличество баллов набранных вами по этому профилю ' + str(larger[1]) + ' (' + str(total[1] * 5) + '%)\n')
             bot.send_message(message.chat.id, 'Количество баллов набранных вами по остальным профилям:\n'
-                                              'Профиль химбио: ' + str(total[0]) + '\n'
-                                              'Профиль Кадеты: ' + str(total[2]) + '\n'
-                                              'Айти профиль: ' + str(total[3]) + '\n'
-                                              'Лингвистический профиль: ' + str(total[4]))
+                                              'Профиль химбио: ' + str(total[0]) + ' (' + str(total[0] * 5) + '%)\n'
+                                              'Профиль Кадеты: ' + str(total[2]) + ' (' + str(total[2] * 5) + '%)\n'
+                                              'Айти профиль: ' + str(total[3]) + ' (' + str(total[3] * 5) + '%)\n'
+                                              'Лингвистический профиль: ' + str(total[4]) + ' (' + str(total[4] * 5) + '%)\n')
         elif total[2] == larger[0]:
             msg = bot.send_message(message.chat.id,
-            'Больше всего вам подходит ' + cfg.cadet + ' \nКоличество баллов набранных вами по этому профилю ' + str(larger[2]))
+            'Больше всего вам подходит ' + cfg.cadet + ' \nКоличество баллов набранных вами по этому профилю ' + str(larger[2]) + ' (' + str(total[2] * 5) + '%)\n')
             bot.send_message(message.chat.id, 'Количество баллов набранных вами по остальным профилям:\n'
-                                              'Профиль химбио: ' + str(total[0]) + '\n'
-                                              'Медиа профиль: ' + str(total[1]) + '\n'
-                                              'Айти профиль: ' + str(total[3]) + '\n'
-                                              'Лингвистический профиль: ' + str(total[4]))
+                                              'Профиль химбио: ' + str(total[0]) + ' (' + str(total[0] * 5) + '%)\n'
+                                              'Медиа профиль: ' + str(total[1]) + ' (' + str(total[1] * 5) + '%)\n'
+                                              'Айти профиль: ' + str(total[3]) + ' (' + str(total[3] * 5) + '%)\n'
+                                              'Лингвистический профиль: ' + str(total[4]) + ' (' + str(total[4] * 5) + '%)\n')
         elif total[3] == larger[0]:
             msg = bot.send_message(message.chat.id,
-            'Больше всего вам подходит ' + cfg.IT + ' \nКоличество баллов набранных вами по этому профилю ' + str(larger[3]))
+            'Больше всего вам подходит ' + cfg.IT + ' \nКоличество баллов набранных вами по этому профилю ' + str(larger[3]) + ' (' + str(total[3] * 5) + '%)\n')
             bot.send_message(message.chat.id, 'Количество баллов набранных вами по остальным профилям:\n'
-                                              'Профиль химбио: ' + str(total[0]) + '\n'
-                                              'Медиа профиль: ' + str(total[1]) + '\n'
-                                              'Профиль Кадеты: ' + str(total[2]) + '\n'
-                                              'Лингвистический профиль: ' + str(total[4]))
+                                              'Профиль химбио: ' + str(total[0]) + ' (' + str(total[0] * 5) + '%)\n'
+                                              'Медиа профиль: ' + str(total[1]) + ' (' + str(total[1] * 5) + '%)\n'
+                                              'Профиль Кадеты: ' + str(total[2])  + ' (' + str(total[2] * 5) + '%)\n'
+                                              'Лингвистический профиль: ' + str(total[4]) + ' (' + str(total[4] * 5) + '%)\n')
         elif total[4] == larger[0]:
             msg = bot.send_message(message.chat.id,
-            'Больше всего вам подходит ' + cfg.linguistic + ' \nКоличество баллов набранных вами по этому профилю ' + str(larger[4]))
+            'Больше всего вам подходит ' + cfg.linguistic + ' \nКоличество баллов набранных вами по этому профилю ' + str(larger[4]) + ' (' + str(total[4] * 5) + '%)\n')
             bot.send_message(message.chat.id, 'Количество баллов набранных вами по остальным профилям:\n'
-                                              'Профиль химбио: ' + str(total[0]) + '\n'
-                                              'Медиа профиль: ' + str(total[1]) + '\n'
-                                              'Профиль Кадеты: ' + str(total[2]) + '\n'
-                                              'Айти профиль: ' + str(total[3]))
+                                              'Профиль химбио: ' + str(total[0]) + ' (' + str(total[0] * 5) + '%)\n'
+                                              'Медиа профиль: ' + str(total[1])  + ' (' + str(total[1] * 5) + '%)\n'
+                                              'Профиль Кадеты: ' + str(total[2]) + ' (' + str(total[2] * 5) + '%)\n'
+                                              'Айти профиль: ' + str(total[3]) + ' (' + str(total[3] * 5) + '%)\n')
     except Exception as e:
         bot.send_message(message.chat.id, 'Ошибка, {}'.format(e))
 
