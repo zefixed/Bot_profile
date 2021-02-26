@@ -1,6 +1,6 @@
 import telebot
 
-token = ''
+token = '1348485436:AAHMeMOVAXSfgVaA0208oy5cdRUGWIN0pIg'
 
 kb_restart = telebot.types.ReplyKeyboardMarkup(True, True)
 kb_restart.row('/start')
